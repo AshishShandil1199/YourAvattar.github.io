@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:-Your Avattar) </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <section>
+        <h1>SEE YOUR AVATTAR HERE :</h1>
+        <div class="centreDiv">
+            <div class="details">
+                <label>ENTER YOUR NAME :</label>
+                <input type="text" id="nameid">
+            </div>
+            <div class="imageDiv">
+                <img src="img1.jpg" alt="Enter name to see your avatar image" width="400" height="200" class="imgchange">
+            </div>
+            <button>CLICK HERE</button>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <script>
+     $(document).ready(function(){
+      $('button').click(function(){
+       const name = $('#nameid').val();
+       alert(name);
+       $('.imgchange').attr('src',`https://joeschmoe.io/api/v1/${name}`);
+       const b = $('.imgchange');
+       console.log(b);
+    
+      });
+     });
+    </script>
+    
+    
+</body>
+</html>
